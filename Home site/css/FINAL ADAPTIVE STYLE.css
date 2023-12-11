@@ -1,0 +1,478 @@
+html {
+  background-image: url(/images/background.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: 100vh;
+  max-height: 100vh;
+  overflow-y: hidden;
+}
+body{
+  margin:0;
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: 100vh;
+  max-height: 100vh;
+  overflow-y: hidden;
+}
+
+
+
+/* ПРЕЛОАДЕР */
+.preloader
+{
+display:flex;
+position: absolute;
+width:100vw;
+height: 100vh;
+max-width: 100vw;
+overflow-x: hidden;
+overflow-y: hidden;
+max-height: 100vh;
+background-color: #000;
+z-index:4;  
+}
+
+.miniback{
+  z-index:2;
+  width:100vw;
+  height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  max-height: 100vh;
+  padding-left: 0;
+  padding-right:0;
+  
+  /*фон в preloader_bg.css*/
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: blur(5px);
+}
+
+.miniback_word{
+  width:100vw;
+  height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  max-height: 100vh;
+  padding-left: 0;
+  padding-right:0;
+  /*фон в preloader_wordы.css*/
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter:blur(10px);
+  opacity: 0;
+  transition: 1s;
+}
+
+.loaded .preloader {
+  display: none;
+}
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+
+
+.outloader{
+  display:none;
+  top:0vh;
+  left:0vw;
+  position: absolute;
+  width:100vw;
+  height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  max-height: 100vh;
+  background-color: #000;
+  z-index:4;  
+  opacity: 0;
+}
+
+.miniout{
+  z-index:2;
+  width:100vw;
+  height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  max-height: 100vh;
+  padding-left: 0;
+  padding-right:0;
+
+  /*фон в preloader_bg.css*/
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: blur(5px);
+}
+
+.outloaded .outloader {
+  opacity: 1;
+  display: block;
+  animation: fadeInFromNone 1s ease-in-out;
+}
+@keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+.textPreloader{
+  position: absolute;
+  z-index: 3;
+  top:60vh;
+  left:46vw;
+  font-family: Srb;
+  opacity:0;
+  order: -1;
+  color: #fff;
+  transition: 0.5s opacity;
+  opacity: 0;
+}
+
+.dots {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: 45vw;
+  top: 45vh;
+  background: #000000;
+  mix-blend-mode: screen;
+  width: 110px;
+  height: 110px;
+  -webkit-filter: blur(4px) contrast(10);
+  z-index:3;
+}
+
+.dot {
+  transform-origin: 50% -20px;
+  position: absolute;
+  top: 75px;
+  left: 45px;
+}
+
+.dot-gfx {
+  background: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+}
+
+@keyframes dot-anim-1 {
+  0% {
+    transform: rotate(0);
+  }
+  60% {
+    transform: rotate(1080deg);
+  }
+  100% {
+    transform: rotate(1080deg);
+  }
+}
+.dot:nth-child(1) {
+  transform: rotate(0);
+  animation: dot-anim-1 4.5s ease-in-out infinite;
+}
+
+@keyframes dot-anim-2 {
+  0% {
+    transform: rotate(0);
+  }
+  70% {
+    transform: rotate(1080deg);
+  }
+  100% {
+    transform: rotate(1080deg);
+  }
+}
+.dot:nth-child(2) {
+  transform: rotate(0);
+  animation: dot-anim-2 4.5s ease-in-out infinite;
+}
+
+@keyframes dot-anim-3 {
+  0% {
+    transform: rotate(0);
+  }
+  80% {
+    transform: rotate(1080deg);
+  }
+  100% {
+    transform: rotate(1080deg);
+  }
+}
+.dot:nth-child(3) {
+  transform: rotate(0);
+  animation: dot-anim-3 4.5s ease-in-out infinite;
+}
+
+@keyframes dot-anim-4 {
+  0% {
+    transform: rotate(0);
+  }
+  90% {
+    transform: rotate(1080deg);
+  }
+  100% {
+    transform: rotate(1080deg);
+  }
+}
+.dot:nth-child(4) {
+  transform: rotate(0);
+  animation: dot-anim-4 4.5s ease-in-out infinite;
+}
+
+@keyframes dot-anim-5 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(1080deg);
+  }
+  100% {
+    transform: rotate(1080deg);
+  }
+}
+.dot:nth-child(5) {
+  transform: rotate(0);
+  animation: dot-anim-5 4.5s ease-in-out infinite;
+}
+
+
+
+
+
+
+
+
+
+.container{
+  max-width: 1200px;
+  height:100%;
+  margin:60px 175px;
+}
+@font-face
+{
+font-family: Rabbits;
+src: url("/fonts/Rabbits.otf");
+}
+@font-face
+{
+font-family: Srb;
+src: url("/fonts/Srb.otf");
+}
+
+.textblocks{
+  position: relative;
+}
+.first-title{
+  font-size:6.25vw;
+  font-weight:500;
+  color: #b68711;
+  mix-blend-mode: difference;
+  font-family: Rabbits, sans-serif;
+
+  text-align: left;
+  position:absolute;
+  left:0;
+  margin-top:13.9vh;
+}
+
+.fftext{
+  height: 15vh;
+}
+
+.second-title{
+
+  font-size:3.9vw;
+  margin-left:1.2vw;
+}
+
+.second-title:after{
+  position: absolute;
+  content:"";
+  height: 23vh;
+  width: 0.3646vw;
+  background-color: #b68711;
+  top:1.3889vh;
+  left:-1.56vw;
+}
+
+.three-title{
+  margin-top:6vh;
+  margin-left:-0.78vw;
+  font-size:2.34vw;
+}
+
+.three-title:after {
+  position: absolute;
+  content:"";
+  height: 0.278vh;
+  width:36.46vw;
+  background-color: #b68711;
+  top:30.5vh;
+  left:-1.56vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  /*  НОВАЯ КНОПКА */
+
+.bubbly-button {
+  top:53.5vh;
+  left:0vw;
+  font-family: Rabbits, sans-serif;
+  font-size: 1.5vw;
+  display: inline-block;
+  width: 18.23vw;
+  height: 8.7vh;
+
+  padding-bottom:6px;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  color:#b68711;
+  border-radius: 60px;
+  border: 4px solid transparent;
+  border-color: #b68711;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.2s;
+  box-shadow: 0 2px 25px rgba(207, 145, 0, 0.2);
+}
+
+.bubbly-button:hover{
+  transition: 0.7s;
+  /*filter:drop-shadow(0px 0px 8px #ff9500)*/
+  box-shadow: 0px 0px 45px -12px #ff9500;
+}
+
+.bubbly-button:focus {
+  outline: 0;
+}
+.bubbly-button:before, .bubbly-button:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out  0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button:before {
+  display: none;
+  top: -100%;
+  background-image: radial-gradient(circle, #b68711 20%, transparent 20%), radial-gradient(circle, transparent 20%, #b68711 20%, transparent 30%), radial-gradient(circle, #b68711 20%, transparent 20%), radial-gradient(circle, #b68711 20%, transparent 20%), radial-gradient(circle, transparent 10%, #b68711 15%, transparent 20%), radial-gradient(circle, #b68711 20%, transparent 20%), radial-gradient(circle, #b68711 20%, transparent 20%), radial-gradient(circle, #b68711 20%, transparent 20%), radial-gradient(circle, #b68711 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button:after {
+  display: none;
+  bottom: -100%;
+  background-image: radial-gradient(circle, #b68711 20%, transparent 20%), radial-gradient(circle, #b68711 20%, transparent 20%), radial-gradient(circle, transparent 10%, #b68711 15%, transparent 20%), radial-gradient(circle, #b68711 20%, transparent 20%), radial-gradient(circle, #b68711 20%, transparent 20%), radial-gradient(circle, #b68711 20%, transparent 20%), radial-gradient(circle, #b68711 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button:active {
+  transform: scale(0.9);
+  background-color: transparent;
+  transition: 0.14s;
+  box-shadow: 0 2px 25px rgba(207, 145, 0, 0.7);
+}
+.bubbly-button.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.4s forwards;
+}
+.bubbly-button.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.4s forwards;
+}
+
+@keyframes topBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+  }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+@keyframes bottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+  }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+

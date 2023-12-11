@@ -1,0 +1,94 @@
+@media (-webkit-device-pixel-ratio: 1.25) {
+  .container{
+  max-width: 900px;
+  height:100%;
+  margin:60px 120px;
+
+    .textPreloader{
+    top:70vh;
+    left:46.5vw;
+}
+  
+  .volume input + svg{
+    width: 2.5vw;
+  }
+
+}  
+@media screen and (max-width: 1080px) and (max-height:2400px){
+ .dots{
+  width:370px;
+  height:370px;
+ }
+}
+@media screen and (max-width: 1366px){
+  .bubbly-button{
+    top:50vh;
+    height: 10.7vh;
+  }
+
+  .volume input + svg{
+    width: 2.5vw;
+  }
+
+  .textPreloader{
+  top:70vh;
+  left:46.5vw;
+  }
+  
+}
+
+@media screen and (min-width: 769px) and (max-width:1024px){
+  .container{
+    max-width: 900px;
+    height:100%;
+    margin:60px 120px;
+  }
+
+  .second-title:after{
+    height: 21.5vh;
+  }
+
+  .three-title{
+     margin-top:4vh;
+  }
+
+  .three-title:after {
+     top:27vh;
+  }
+  
+  .bubbly-button{
+    top:42vh;
+    height: 9.5vh;
+    width: 18.23vw;
+  }
+}
+
+
+@media screen and (max-width: 1280px) and (max-height:1024px)
+{
+  .fftext{
+    height: 12vh;
+  }
+
+  .second-title:after{
+    height: 18vh;
+  }
+  
+  .three-title{
+     margin-top:3vh;
+  }
+
+  .three-title:after {
+     top:23vh;
+  }
+
+  .bubbly-button {
+     top:40vh;
+    height: 8.5vh;
+  }
+
+  .volume input + svg{
+    width: 3vw;
+  }
+  
+}
